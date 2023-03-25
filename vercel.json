@@ -4,23 +4,11 @@
       "src": "Hardware/*.py",
       "use": "@vercel/python"
     },
-    {
-      "src": "/Hardware/templates/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "/Hardware/js/*.js",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
       "src": "/Hardware/*.py",
       "dest": "/Hardware/server.py"
-    },
-    {
-      "src": "/Hardware/templates/*.html",
-      "dest": "/Hardware/hardware.html"
     }
+    
   ]
 }
