@@ -1,18 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "/Hardware/server.py",
-      "use": "@vercel/python"
+  "functions": {
+    "Hardware/*": {
+      "memory": 128,
+      "maxDuration": 10,
+      "runtime": "python3.9"
     }
-  ],
-  "routes": [
-    {
-      "src": "/Hardware/templates/(.*)",
-      "dest": "/hardware.html"
-    }
-  ],
-  "env": {
-    "PASSWORD": "1234"
   }
 }
