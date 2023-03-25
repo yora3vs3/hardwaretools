@@ -1,14 +1,18 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "Hardware/*.py",
+      "src": "/Hardware/server.py",
       "use": "@vercel/python"
-    },
+    }
+  ],
   "routes": [
     {
-      "src": "/Hardware/*.py",
-      "dest": "/Hardware/server.py"
+      "src": "/Hardware/templates/(.*)",
+      "dest": "/hardware.html"
     }
-    
-  ]
+  ],
+  "env": {
+    "PASSWORD": "1234"
+  }
 }
